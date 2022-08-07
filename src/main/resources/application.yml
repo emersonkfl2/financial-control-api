@@ -1,0 +1,21 @@
+#spring.datasource.url=jdbc:h2:mem:financial_database;DATABASE_TO_UPPER=false
+spring:
+  datasource:
+    username: admin
+    url: jdbc:h2:file:/data/financial_database;DATABASE_TO_UPPER=false
+    driverClassName: org.h2.Driver
+    password: admin
+  h2:
+    console:
+      enabled: 'true'
+      path: /h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: 'true'
+    properties:
+      hibernate:
+        show_sql: 'true'
+        format_sql: 'true'
+
+
+
